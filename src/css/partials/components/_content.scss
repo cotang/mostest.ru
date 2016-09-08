@@ -27,6 +27,7 @@
       }
     }
     .btn--form{
+      margin-bottom: 30px;
       &:before{
         content: '';
         display: inline-block;
@@ -37,24 +38,26 @@
     }
     .recaptcha{
       flex: 0 0 100%;
+      position: relative;
+      top: -10px;
+      transform: scale(0.65);
+
       @include mq($from:xs, $until:sm){
         position: relative;
-        top: -10px;
+        top: -5px;
         left: -35px;
         transform: scale(0.65);
       }
     }
     .captcha{
-      @include mq($from:xs, $until:sm){
-        margin-bottom: 0;
-      }      
+      margin-bottom: 0;   
     }
   }
   &__form-title{
     text-align: center;
     width: 100%;
     margin: 0;
-    padding: 40px 20px 30px;
+    padding: 30px 20px 20px;
     text-transform: uppercase;
     position: relative;
     font-weight: $semibold;
@@ -66,7 +69,7 @@
     &:before{
       display: block;
       position: absolute;
-      top: 52px;
+      top: 42px;
       content: "";
       width: calc(100% - 40px);
       height: 7px;

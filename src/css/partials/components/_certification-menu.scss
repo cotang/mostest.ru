@@ -1,5 +1,5 @@
 .certification-menu{
-  margin-top: 20px;
+  margin-top: 30px;
   &__list{
     padding-left: 0;
     margin: 0;
@@ -73,6 +73,8 @@
 }
 
 .certification-dropdown{
+  max-height: 400px;
+  overflow-y: auto;
   display: none;
   padding-left: 0;
   list-style-type: none;

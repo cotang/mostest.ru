@@ -20,7 +20,7 @@
   //   font-size: $font-size-subtitle;
   // }
   &__input{
-    padding: 8px 15px; 
+    padding: 8px 10px; 
     width: 100%;
     border: 1px solid $grey-border;
     &:focus::-webkit-input-placeholder{
@@ -35,7 +35,7 @@
     }
   }
   &__textarea{
-    padding: 8px 15px;    
+    padding: 8px 10px;    
     width: 100%;
     border: 1px solid $grey-border;
     height: 150px;

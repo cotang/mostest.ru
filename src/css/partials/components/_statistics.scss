@@ -11,6 +11,9 @@
   @include mq($from:xs, $until:lg){
     padding: 20px;
   }
+  @include mq($from:xs, $until:sm){
+    display: none;
+  }
   
   &__title{
     color: $white;

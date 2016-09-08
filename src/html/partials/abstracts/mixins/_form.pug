@@ -1,4 +1,5 @@
 - var application = [{name: 'application', id: 'formApplication', title : 'Заказать документ', application: true, button: 'Заказать документ', success: 'Ваша заявка отправлена'}] 
+- var applicationMini = [{name: 'application-mini', id: 'formApplicationMini', title : 'Узнать стоимость', applicationMini: true, button: 'Узнать стоимость', success: 'Ваша заявка отправлена'}] 
 - var question = [{name: 'question', id: 'formQuestion', title : 'Задать вопрос', question: true,  button: 'Спросить', success: 'Ваш вопрос отправлен'}] 
 - var call = [{name: 'call', id: 'formCall', title : 'Заказать звонок', call: true, button: 'Заказать звонок', success: 'Ваша заявка отправлена'}] 
 - var review = [{name: 'review', id: 'formReview', title : 'Оставить отзыв', review: true, button: 'Оставить отзыв', success: 'Отзыв успешно оставлен'}] 
@@ -15,7 +16,7 @@ mixin form(items)
           .form-group.field-question-production.required
             +e.INPUT.input(type='text', name='Продукция', placeholder='Наименование продукции*') 
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.field-question-name.required.has-error
+          .form-group.field-question-name.required
             +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
             p.help-block.help-block-error Ошибка заполнения поля формы
           .form-group.field-question-email.required.has-success
@@ -23,7 +24,15 @@ mixin form(items)
             p.help-block.help-block-error Ошибка заполнения поля формы
           .form-group.field-question-phone
             +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон')
-            p.help-block.help-block-error Ошибка заполнения поля формы            
+            p.help-block.help-block-error Ошибка заполнения поля формы 
+
+        if item.applicationMini
+          .form-group.field-question-production.required
+            +e.INPUT.input(type='text', name='Продукт', placeholder='Ваш продукт или услуга*') 
+            p.help-block.help-block-error Ошибка заполнения поля формы
+          .form-group.field-question-email.required
+            +e.INPUT.input(type='text', name='Email или телефон', placeholder='Ваш e-mail или телефон*')
+            p.help-block.help-block-error Ошибка заполнения поля формы
 
         if item.question
           .form-group.field-question-name.required.has-error

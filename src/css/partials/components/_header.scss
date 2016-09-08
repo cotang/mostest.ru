@@ -2,7 +2,7 @@
   padding: 0 50px 20px;
   background-image: url(../img/header-bg.jpg);
   background-repeat: no-repeat;
-  background-position: 50% 100%;
+  background-position: 50% 50%;
   background-size: cover;
   outline: 1px solid $white;
   outline-offset: -5px;
@@ -11,13 +11,15 @@
   }
 
   &__inner{
-    margin: 0 10px;
+    position: relative;
+    margin: 0 20px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     @include mq($from:xs, $until:lg){
       flex-wrap: wrap;
       justify-content: center;
+      margin: 20px 20px 0;
     }
   }
   &__wrapper{
@@ -29,22 +31,40 @@
     }
   }
   &__buttons{
+    flex: 0 0 33%;
     text-align: right;
     max-width: 250px;
     margin-top: 25px;
+    @include mq($from:xs, $until:lg){
+      flex: 0 0 100%;
+      text-align: center;
+    }
     .btn{
-      margin: 0 20px 10px;
+      margin-bottom: 10px;
     }
   }
 }
 
 .logo{
-  margin-top: 20px;
-  text-align: center;
+  flex: 0 0 33%;
+  margin-top: -30px;
+  text-align: left;
+  @include mq($from:xs, $until:lg){
+    flex: 0 0 50%;
+    margin-top: 0;
+    text-align: center;
+  }
+  @include mq($from:xs, $until:sm){
+    flex: 0 0 100%;
+  }
   &__img{
     display: block;
-    width: 180px;
-    height: auto;   
+    width: 160px;
+    height: auto;
+    text-align: center;
+    @include mq($from:xs, $until:lg){
+      margin: 0 auto;
+    }   
   }
   &__title{
     margin: 10px 0 0;
@@ -55,7 +75,7 @@
     letter-spacing: $letter-spacing-logo;
   }
   &__description{
-    margin: 10px 0 0;
+    margin: 5px 0 0;
     font-size: $font-size-slogan;
     text-transform: uppercase;
     font-weight: $regular;
@@ -64,41 +84,55 @@
 
 .nav{
   flex: 0 0 100%;
+  display: flex;
+  justify-content: flex-end;
+  @include mq($from:xs, $until:lg){
+    order: 1;
+  }
   &__hamburger{
     display: none;
     text-align: center;
-    @include mq($from:xs, $until:md){
+    position: absolute;
+    top: 180px;
+    right: calc(50% - 160px);
+    transform: translateX(50%);
+    @include mq($from:xs, $until:lg){
       display: block;
+    }
+    @include mq($from:xs, $until:sm){
+      top: 310px;
+      right: calc(50% - 140px);
     }
   }
   &__list-wrapper{
-    @include mq($from:xs, $until:md){
+    flex: 0 0 50%;
+    @include mq($from:xs, $until:lg){
+      flex: 0 0 100%;
       display: none;
     }
   }
   &__list{
     margin: 20px 0;
-    padding-left: 20px;
-    padding-right: 10px;
+    padding: 0;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     flex-wrap: wrap;
-    @include mq($from:xs, $until:md){
+    @include mq($from:xs, $until:lg){
       padding: 0;
       text-align: center;
-      margin-top: 0;
+      margin-bottom: 0;
     }
   }
   &__item{
-    @include mq($from:xs, $until:md){
+    @include mq($from:xs, $until:lg){
       flex: 0 0 100%;
       padding: 5px 0;
     }    
   }
   &__slash{
-    @include mq($from:xs, $until:md){
+    @include mq($from:xs, $until:lg){
       display: none;
     }    
   }
@@ -136,9 +170,18 @@
 }
 
 .city{
-  margin-top: 15px;
-  margin-right: 10px;
+  flex: 0 0 33%;
+  max-width: 180px;
+  margin: 15px auto 0;
   text-align: left;
+  @include mq($from:sm, $until:lg){
+    flex: 0 0 50%;
+  }
+  @include mq($from:xs, $until:sm){
+    flex: 0 0 100%;
+    text-align: center;
+    margin-top: 25px;
+  }
   &__name-wrapper{
     position: relative;
     margin-bottom: 5px;

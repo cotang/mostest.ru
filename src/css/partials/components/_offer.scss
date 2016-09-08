@@ -36,7 +36,8 @@
     position: relative;
     border: 1px solid transparent;
     @include mq($from:xs, $until:md){
-      flex: 0 0 100%
+      flex: 0 0 100%;
+      max-width: 100%;
     }
     &:after{
       content: "";
