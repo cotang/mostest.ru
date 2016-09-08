@@ -136,21 +136,14 @@
 }
 
 .city{
-  margin-top: 10px;
+  margin-top: 15px;
   margin-right: 10px;
   text-align: left;
-  // @include mq($from:md, $until:lg){
-  //   margin-right: -50px;
-  // }
-  // @include mq($from:xs, $until:sm){
-  //   text-align: center;
-  //   margin-right: 0;
-  // }
   &__name-wrapper{
     position: relative;
+    margin-bottom: 5px;
   }
-  &__name{
-    margin-bottom: 15px;
+  &__name{    
     &:after{
       content: "";
       display: inline-block;
@@ -190,20 +183,18 @@
     font-size: $font-size-tel;
     color: $text-color;
     font-weight: $semibold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     position: relative;
     &:before{
       content: "";
       display: inline-block;
       vertical-align: bottom;
+      margin-bottom: 3px;
       @include sprite($s-icon-phone); 
       position: absolute;  
       bottom: 0;
       transform: translateX(-120%);  
     }    
-  }
-  &__tel-wrapper{
-    margin-bottom: 10px;
   }
   &__email{
     color: $text-color;
