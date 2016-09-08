@@ -904,24 +904,23 @@ img {
               transform: translateY(150%); }
 
 .city {
-  margin-top: 10px;
+  margin-top: 15px;
   margin-right: 10px;
   text-align: left; }
   .city__name-wrapper {
-    position: relative; }
-  .city__name {
-    margin-bottom: 15px; }
-    .city__name:after {
-      content: "";
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: 10px;
-      background-image: url(../img/png-sprite.png);
-      background-position: -335px -72px;
-      width: 8px;
-      height: 5px; }
-    .city__name:hover, .city__name:focus {
-      cursor: pointer; }
+    position: relative;
+    margin-bottom: 5px; }
+  .city__name:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    background-image: url(../img/png-sprite.png);
+    background-position: -335px -72px;
+    width: 8px;
+    height: 5px; }
+  .city__name:hover, .city__name:focus {
+    cursor: pointer; }
   .city__dropdown {
     display: none;
     text-align: left;
@@ -949,12 +948,13 @@ img {
     font-size: 18px;
     color: #000000;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     position: relative; }
     .city__tel:before {
       content: "";
       display: inline-block;
       vertical-align: bottom;
+      margin-bottom: 3px;
       background-image: url(../img/png-sprite.png);
       background-position: -231px -203px;
       width: 21px;
@@ -964,8 +964,6 @@ img {
       -webkit-transform: translateX(-120%);
           -ms-transform: translateX(-120%);
               transform: translateX(-120%); }
-  .city__tel-wrapper {
-    margin-bottom: 10px; }
   .city__email {
     color: #000000; }
 
@@ -1259,7 +1257,7 @@ img {
     .content__form-title:before {
       display: block;
       position: absolute;
-      top: 5px;
+      top: 52px;
       content: "";
       width: calc(100% - 40px);
       height: 7px;
@@ -1267,9 +1265,9 @@ img {
       border-bottom: 1px solid #dadada; }
     .content__form-title span {
       position: relative;
-      z-index: 2;
+      z-index: 1;
       background-color: #ffffff;
-      padding: 5px 30px;
+      padding: 5px 20px;
       display: inline-block; }
   .content__text {
     -webkit-flex: 0 0 calc(100% - 320px);
@@ -1783,7 +1781,7 @@ img {
     z-index: 2;
     display: block;
     width: 100%;
-    padding: 80px 20px 0;
+    padding: 80px 20px 10px;
     color: #000000;
     font-weight: 600; }
 
