@@ -1,5 +1,5 @@
 .content{
-  padding: 40px 50px;
+  padding: 60px 50px;
   display: flex;
   flex-wrap: wrap;
   @include mq($from:xs, $until:lg){
@@ -91,5 +91,10 @@
   }
   &__title{
     margin: 0 0 20px;
+    font-size: $font-size-title;
+  }
+
+  h1, h2, h3, h4, h5, h6{
+    text-transform: uppercase;
   }
 }
