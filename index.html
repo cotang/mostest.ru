@@ -58,11 +58,11 @@
               </li>
               <li class="nav__slash">| </li>
               <li class="nav__item">
-                <a class="nav__link" href="page.html">О сертификации</a>
+                <a class="nav__link" href="page-glossary.html">О сертификации</a>
               </li>
               <li class="nav__slash">| </li>
               <li class="nav__item">
-                <a class="nav__link" href="page.html">Новости</a>
+                <a class="nav__link" href="page-news.html">Новости</a>
               </li>
               <li class="nav__slash">| </li>
               <li class="nav__item">
@@ -99,8 +99,8 @@
         </div>
         <!-- Buttons wrapper-->
         <div class="header__buttons">
-          <a class="btn btn--blue" href="#">Заказать звонок с сайта</a>
-          <a class="btn btn--yellow" href="#">Задать вопрос эксперту </a>
+          <a class="btn btn--blue" href="page-form-call.html">Заказать звонок с сайта</a>
+          <a class="btn btn--yellow" href="page-form-question.html">Задать вопрос эксперту </a>
         </div>
       </div>
       <!-- Certification menu-->
@@ -264,15 +264,14 @@
     </header>
     <main>
       <section class="page page--front-page container">
-        <!-- Content-->
-        <section class="content">
-          <div class="content__form">
-            <h3 class="content__form-title">
-              <span>Узнать стоимость</span>
-            </h3>
+        <div class="page__inner">
+          <div class="page__form">
             <!-- Form application-->
             <section class="form form--application-mini">
-              <form action="" method="" id="formApplicationMini">
+              <form class="form__form" action="" method="" id="formApplicationMini">
+                <h3 class="form__title">
+                  <span>Узнать стоимость</span>
+                </h3>
                 <div class="form-group field-question-production required">
                   <input class="form__input" type="text" name="Продукт" placeholder="Ваш продукт или услуга*" />
                   <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
@@ -289,14 +288,17 @@
               </form>
             </section>
           </div>
-          <div class="content__text">
+          <!-- Content-->
+          <section class="content content--half">
             <h1 class="content__title">Оперативная сертификация</h1>
-            <p>С 1999 года сертификационный центр «Мостест» оказывает помощь в оформлении разнообразной разрешительной документации в области сертификации товаров и услуг. За 12 лет успешной работы были оформлены множество сертификатов и заключений, получен
-              огромный опыт в области сертификации и сформирована команда специалистов.</p>
-            <p>На сегодняшний день сертификационный центр «Мостест» является полноправным филиалом органа по сертификации, аккредитованного в нескольких системах. Он представляет собой многопрофильный центр сертификации, имеющий широкие связи с различными
-              государственными организациями.</p>
-          </div>
-        </section>
+            <div class="content__text">
+              <p>С 1999 года сертификационный центр «Мостест» оказывает помощь в оформлении разнообразной разрешительной документации в области сертификации товаров и услуг. За 12 лет успешной работы были оформлены множество сертификатов и заключений, получен
+                огромный опыт в области сертификации и сформирована команда специалистов.</p>
+              <p>На сегодняшний день сертификационный центр «Мостест» является полноправным филиалом органа по сертификации, аккредитованного в нескольких системах. Он представляет собой многопрофильный центр сертификации, имеющий широкие связи с различными
+                государственными организациями.</p>
+            </div>
+          </section>
+        </div>
         <!-- Offer-->
         <section class="offer" itemscope itemtype="http://schema.org/Service">
           <h2 class="offer__title">Что предлагает Мостест?</h2>
@@ -365,7 +367,7 @@
             </li>
           </ul>
         </section>
-        <!-- Branches         -->
+        <!-- Branches-->
         <section class="branches">
           <h2 class="branches__title">
             <a href="#">Сертификация по отраслям продукции</a>
@@ -427,7 +429,7 @@
             </li>
           </ul>
         </section>
-        <!-- Gratitude   -->
+        <!-- Gratitude-->
         <section class="gratitude">
           <h2 class="gratitude__title">
             <a href="page-reviews.html">Благодарственные письма</a>
@@ -556,11 +558,11 @@
               </li>
               <li class="nav__slash">| </li>
               <li class="nav__item">
-                <a class="nav__link" href="page.html">О сертификации</a>
+                <a class="nav__link" href="page-glossary.html">О сертификации</a>
               </li>
               <li class="nav__slash">| </li>
               <li class="nav__item">
-                <a class="nav__link" href="page.html">Новости</a>
+                <a class="nav__link" href="page-news.html">Новости</a>
               </li>
               <li class="nav__slash">| </li>
               <li class="nav__item">
@@ -597,8 +599,8 @@
         </div>
         <!-- Buttons wrapper-->
         <div class="footer__buttons">
-          <a class="btn btn--blue" href="#">Заказать звонок с сайта</a>
-          <a class="btn btn--yellow" href="#">Задать вопрос эксперту</a>
+          <a class="btn btn--blue" href="page-form-call.html">Заказать звонок с сайта</a>
+          <a class="btn btn--yellow" href="page-form-question.html">Задать вопрос эксперту </a>
         </div>
       </div>
       <div class="footer__bottom">
@@ -651,7 +653,10 @@
               <p>Закажите сейчас бесплатный звонок с сайта по любому актуальному для Вас вопросу – специалист Мостест Вам перезвонит.</p>
               <!-- Form call-->
               <section class="form form--call">
-                <form action="" method="" id="formCall">
+                <form class="form__form" action="" method="" id="formCall">
+                  <h3 class="form__title">
+                    <span>Заказать звонок</span>
+                  </h3>
                   <div class="form-group field-question-name required has-error">
                     <input class="form__input" type="text" name="Имя" placeholder="Ваше имя*" />
                     <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
@@ -678,7 +683,10 @@
               <p>С чего начать оформление? Заполнив форму, Вы можете получить полную информацию по любым актуальным для Вас вопросам сертификации, метрологии, стандартизации и т.д.</p>
               <!-- Form question-->
               <section class="form form--question">
-                <form action="" method="" id="formQuestion">
+                <form class="form__form" action="" method="" id="formQuestion">
+                  <h3 class="form__title">
+                    <span>Задать вопрос</span>
+                  </h3>
                   <div class="form-group field-question-name required has-error">
                     <input class="form__input" type="text" name="Имя" placeholder="Ваше имя*" />
                     <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
@@ -710,7 +718,9 @@
         </li>
       </ul>
     </div>
-    <div class="overlay"></div>
+    <div class="overlay">
+      <div class="help-block-success">Спасибо! Ваш запрос отправлен специалисту по сертификации</div>
+    </div>
     <script src="js/script.min.js"></script>
   </body>
 </html>
