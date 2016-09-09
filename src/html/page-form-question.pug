@@ -1,0 +1,23 @@
+extends partials/templates/template.pug
+//- include partials/abstracts/bemto/bemto.pug
+
+block content
+  +b.SECTION.page--form-question.container     
+    +b.SECTION.breadcrumbs
+      a(href="index.html") Центр сертификации Мостест
+      =' > '
+      span Вопрос-ответ        
+    // Content
+    +b.SECTION.content--wide
+      +e.H1.title Вопрос-ответ 
+      +e.text
+        p С чего начать оформление? – этим вопросом задавался каждый российский предприниматель, независимо от того, является ли он руководителем промышленного предприятия или владельцем торгового бизнеса. Заполнив форму, Вы можете получить полную информацию по любым актуальным для Вас вопросам сертификации, метрологии, стандартизации и т.д.
+          
+    include partials/components/form--question.pug
+    include partials/components/questions.pug
+
+    include partials/components/clients.pug
+    +e.page__bottom
+      include partials/components/reviews.pug
+      include partials/components/managers.pug
+

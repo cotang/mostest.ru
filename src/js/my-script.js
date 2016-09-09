@@ -1,5 +1,6 @@
 window.$ = window.jQuery =  require('jquery');
 window.slick =              require('./vendor/bower/slick');
+window.inputmask =          require('./vendor/bower/jquery.inputmask.bundle');
 
 jQuery(document).ready(function($){  
 
@@ -80,7 +81,7 @@ jQuery(document).ready(function($){
       infinite: true,
       arrows: true,
       dots: false,
-      slidesToShow: 4,
+      slidesToShow: 3,
       slidesToScroll: 1,
       centerMode: true,    
       centerPadding: '0'
@@ -90,7 +91,7 @@ jQuery(document).ready(function($){
       infinite: true,
       arrows: true,
       dots: false,
-      slidesToShow: 7,
+      slidesToShow: 6,
       slidesToScroll: 1,
       centerMode: true,    
       centerPadding: '0'
@@ -150,6 +151,9 @@ jQuery(document).ready(function($){
         }
       );
   });
+
+  /* Маска телефона */
+  $('#formCall input[type="tel"]').inputmask("+7(999)9999999");
 
   
 });

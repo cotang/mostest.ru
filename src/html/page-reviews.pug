@@ -1,0 +1,44 @@
+extends partials/templates/template.pug
+
+block content
+  +b.SECTION.page--reviews.container
+    +b.SECTION.breadcrumbs
+      a(href="page.html") Центр сертификации Мостест
+      =' > '
+      span Отзывы
+    // Content
+    +b.SECTION.content--wide
+      +e.H1.title Отзывы
+      +e.text
+        p Вы можете оставить свой отзыв о нашей компании в нижеприведенной форме.
+        p Мы будем рады Вашим мнениям!
+
+    include partials/components/form--review.pug
+
+    include partials/components/gratitude.pug
+
+    +e.page__review-articles
+      +b.ARTICLE.review
+        +e.H2.title Благодарим за плодотворное сотрудничество
+        +e.P.person Компания: 
+          span ООО Ринджана                
+        +e.P.text Комментарий: 
+          span Благодарим за плодотворное сотрудничество, индивидуальный подход, оперативность, грамотность при выполнении работ. 
+      +b.ARTICLE.review
+        +e.H2.title Благодарим за плодотворное сотрудничество
+        +e.P.person Компания: 
+          span ООО Ринджана                
+        +e.P.text Комментарий: 
+          span Благодарим за плодотворное сотрудничество, индивидуальный подход, оперативность, грамотность при выполнении работ. 
+      +b.ARTICLE.review
+        +e.H2.title Благодарим за плодотворное сотрудничество
+        +e.P.person Компания: 
+          span ООО Ринджана                
+        +e.P.text Комментарий: 
+          span Благодарим за плодотворное сотрудничество, индивидуальный подход, оперативность, грамотность при выполнении работ. 
+
+
+    include partials/components/clients.pug
+    +e.page__bottom
+      include partials/components/reviews.pug
+      include partials/components/managers.pug

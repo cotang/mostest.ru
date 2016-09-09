@@ -30,3 +30,17 @@
 .field-question-recaptcha .g-recaptcha > div { 
   margin: 0 auto;
 }
+
+.overlay {
+  .help-block-success{
+    display: block;
+    background-color: $white;
+    font-size: $font-size-subtitle;
+    max-width: 250px;
+    position: absolute;
+    padding: 20px 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

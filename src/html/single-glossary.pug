@@ -1,0 +1,51 @@
+extends partials/templates/template.pug
+//- include partials/abstracts/bemto/bemto.pug
+
+block content
+  +b.SECTION.page--single-glossary.container  
+    +b.SECTION.breadcrumbs
+      a(href="index.html") Центр сертификации Мостест
+      =' > '
+      a(href="page-glossary.html") Сертификация продукции
+      =' > '
+      span Все записи на букву "А" 
+    +e.inner
+      // Sidebar      
+      +b.ASIDE.sidebar
+        +e.form
+          include partials/components/form--application-mini.pug
+      // Content
+      +b.SECTION.content
+        +b.glossary
+          +e.A.link-all(href="page-glossary.html") Все записи:
+          +e.A.link(href="single-glossary.html") А
+          +e.A.link(href="single-glossary.html") Б
+          +e.A.SPAN.letter В
+          +e.A.link(href="single-glossary.html") Г
+          +e.A.link(href="single-glossary.html") Д
+          +e.A.link(href="single-glossary.html") Е
+          +e.SPAN.letter Э
+          +e.SPAN.letter Ю
+          +e.A.link(href="single-glossary.html") Я
+
+        +b.glossary-item  
+          +e.A.link(href="page.html") Автомобили
+        +b.glossary-item
+          +e.A.link(href="page.html") Алкогольная продукция / Декларирование и сертификация алкогольной продукции
+        +b.glossary-item  
+          +e.A.link(href="page.html") Алюминий
+        +b.glossary-item
+          +e.A.link(href="page.html") Анкер / Сертификат на анкера
+        +b.glossary-item  
+          +e.A.link(href="page.html") Антенна / Сертификат на антенну
+        +b.glossary-item
+          +e.A.link(href="page.html") Асфальт / Сертификат на асфальт
+
+        include partials/components/share.pug
+        
+    include partials/components/clients.pug
+    +e.page__bottom
+      include partials/components/reviews.pug
+      include partials/components/managers.pug
+
+

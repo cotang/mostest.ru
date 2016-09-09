@@ -1,0 +1,34 @@
+extends partials/templates/template.pug
+
+block content
+  +b.SECTION.page--contacts.container
+    +b.SECTION.breadcrumbs
+      a(href="page.html") Центр сертификации Мостест
+      =' > '
+      span Контакты
+    +e.inner
+      // Sidebar      
+      +b.ASIDE.sidebar
+        +e.form
+          include partials/components/form--application-mini.pug
+      // Content
+      +b.SECTION.content           
+        +e.H1.title Контакты
+        +e.text 
+          p Вы можете доверить нам определенные этапы или весь спектр сертификационных мероприятий –
+          ul
+            li декларирование соответствия продукции,
+            li сертификацию СМК,
+            li проверку всех видов средств измерений,
+            li разработку технических условий и т.д.
+          p профессионализму наших специалистов, проверенному многолетним опытом работы с надзорными органами . Центр сертификации «МосТест» обоснованно гарантирует не только минимальные сроки и традиционное качество предоставления услуг, но и низкую стоимость работ за счет их оптимизации.
+        include partials/components/offices.pug
+
+    include partials/components/clients.pug
+    +e.page__bottom
+      include partials/components/reviews.pug
+      include partials/components/managers.pug
+
+
+
+

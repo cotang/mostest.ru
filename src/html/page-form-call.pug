@@ -1,0 +1,22 @@
+extends partials/templates/template.pug
+//- include partials/abstracts/bemto/bemto.pug
+
+block content
+  +b.SECTION.page--form-call.container
+    +b.SECTION.breadcrumbs
+      a(href="index.html") Центр сертификации Мостест
+      =' > '
+      span Заказать звонок         
+    // Content
+    +b.SECTION.content--wide
+      +e.H1.title Заказать звонок
+      +e.text
+        p Актуальная на сегодня в России система сертификации регулярно меняется, совершенствуется и реформируется, что неизбежно приводит к разночтениям и др. сложностям при оформлении разрешительных документов.  Для того, чтобы получить всегда бесплатную консультацию или полную поддержку центра «МосТест» по сопровождения определенных этапов сертификации, Вы можете заказать звонок по любому актуальному для Вас вопросу – и Вам быстро перезвонят. 
+        
+      include partials/components/form--call.pug
+
+    include partials/components/clients.pug
+    +e.page__bottom
+      include partials/components/reviews.pug
+      include partials/components/managers.pug
+

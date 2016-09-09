@@ -14,10 +14,10 @@ include ../abstracts/bemto/bemto.pug
             +e.link(href="page.html") Услуги 
           +e.slash | 
           +e.item
-            +e.link(href="page.html") О сертификации
+            +e.link(href="page-glossary.html") О сертификации
           +e.slash | 
           +e.item 
-            +e.link(href="page.html") Новости
+            +e.link(href="page-news.html") Новости
           +e.slash | 
           +e.item
             +e.link(href="page-contacts.html") Контакты 
@@ -42,8 +42,8 @@ include ../abstracts/bemto/bemto.pug
         +e.A.email(href="mailto:spb@mostest.ru", target="_blank") spb@mostest.ru
     // Buttons wrapper
     +e.buttons
-        +b.A.btn--blue(href="#") Заказать звонок с сайта
-        +b.A.btn--yellow(href="#") Задать вопрос эксперту                
+      +b.A.btn--blue(href="page-form-call.html") Заказать звонок с сайта
+      +b.A.btn--yellow(href="page-form-question.html") Задать вопрос эксперту                
   // Certification menu
   +b.NAV.certification-menu
     +e.UL.list

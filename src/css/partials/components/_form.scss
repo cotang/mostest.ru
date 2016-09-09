@@ -1,24 +1,50 @@
 .form{
   text-align: center;
-  // @include mq($from:xs, $until:sm){
-  //   padding: 0 20px;
-  // } 
-  form{
+  background-image: linear-gradient(135deg, $yellow 35%, $blue 35%, $blue 75%, $yellow 75%), linear-gradient(135deg, $yellow 35%, $blue 35%, $blue 75%, $yellow 75%);
+  background-repeat: repeat-x, repeat-x;
+  background-position: 0 0, 0 100%;
+  background-size: 60px 10px, 60px 10px;
+  border-right: 1px solid $grey-border;
+  border-left: 1px solid $grey-border;
+  max-width: 500px;
+  margin: 30px auto;
+
+  &__form{
     display: flex;
     flex-wrap: wrap; 
     justify-content: center;   
   }
-  // &__title{
-  //   flex: 0 0 100%;
-  //   margin: 40px 0 30px;
-  //   text-transform: uppercase;
-  //   border-radius: 15px 15px 0 0;    
-  //   padding: 25px 0 25px;
-  //   background-color: $light-blue;    
-  //   font-weight: $regular;
-  //   text-transform: uppercase;
-  //   font-size: $font-size-subtitle;
-  // }
+  &__title{
+    text-align: center;
+    width: 100%;
+    margin: 10px 0 0;
+    padding: 25px 20px;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: $semibold;
+    font-size: $font-size-subtitle;
+    @include mq($from:xs, $until:sm){
+      padding: 20px 20px 10px;
+    }
+    &:before{
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-75%);
+      content: "";
+      width: calc(100% - 40px);
+      height: 7px;
+      border-top: 1px solid $grey-border;
+      border-bottom: 1px solid $grey-border;
+    }
+    span{
+      position: relative;
+      z-index: 1;
+      background-color: $white;
+      padding: 0 20px;
+      display: inline-block;
+    }
+  }
   &__input{
     padding: 8px 10px; 
     width: 100%;
@@ -46,9 +72,6 @@
       color: transparent;         
     } 
   }
-  // &__time-text{
-  //   font-size: $font-size-small;
-  // } 
   .recaptcha{
     flex: 0 0 100%;
     margin-bottom: 0;
@@ -57,8 +80,8 @@
 
 .form-group{
   flex: 0 0 100%;
-  // padding-left: 20px;
-  // padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .captcha{

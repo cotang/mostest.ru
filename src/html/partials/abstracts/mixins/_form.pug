@@ -8,15 +8,16 @@
 mixin form(items)
   each item in items
     +b.SECTION(class= 'form--' + item.name)
-      form(action='', method='', id= item.id)
+      +e.FORM.form(action='', method='', id= item.id)
         //- +e.A.close(href='#') Закрыть
-        //- +e.H3.title #{item.title}
-
+        +e.H3.title 
+          span #{item.title}
+          
         if item.application
           .form-group.field-question-production.required
             +e.INPUT.input(type='text', name='Продукция', placeholder='Наименование продукции*') 
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.field-question-name.required
+          .form-group.field-question-name.required.has-error
             +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
             p.help-block.help-block-error Ошибка заполнения поля формы
           .form-group.field-question-email.required.has-success

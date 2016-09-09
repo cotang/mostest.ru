@@ -1,13 +1,17 @@
 .gratitude{
+  flex: 0 0 100%;
   background-image: url(../img/bg-3.jpg);
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 100% 0;
   background-size: cover;
   text-align: center;
   padding: 20px 60px 20px;
   outline: 1px solid $white;
   outline-offset: -5px; 
-
+  @include mq($from:xs, $until:md){
+    display: none;
+  }
+  
   &__title{
     margin: 20px 0;
     text-transform: uppercase;

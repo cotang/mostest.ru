@@ -26,9 +26,12 @@
 @import "partials/components/overlay";
 @import "partials/components/breadcrumbs";
 @import "partials/components/share";
-
+@import "partials/components/pagination";
+@import "partials/components/navigation";
+@import "partials/components/glossary";
 
 @import "partials/components/header";
+@import "partials/components/nav";
 @import "partials/components/certification-menu";
 @import "partials/components/footer";
 @import "partials/components/side-fixed-menu";
@@ -46,4 +49,6 @@
 @import "partials/components/reviews";
 @import "partials/components/managers";
 
-
+@import "partials/components/office";
+@import "partials/components/question";
+@import "partials/components/news";
