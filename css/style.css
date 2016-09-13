@@ -931,25 +931,26 @@ img {
   text-align: left;
   margin-top: 20px;
   margin-bottom: 20px; }
-  .glossary__all {
-    display: inline-block;
-    margin-right: 10px; }
+  .glossary__list {
+    padding-left: 0; }
+  .glossary__item {
+    display: inline-block; }
+    .glossary__item--all {
+      display: inline-block;
+      margin-right: 10px; }
   .glossary__link {
     color: #000000;
-    font-weight: 600; }
+    font-weight: 600;
+    padding: 5px 0.1em; }
     .glossary__link:hover, .glossary__link:focus, .glossary__link:active {
       color: #ffffff;
       background-color: #2d5d8b; }
-  .glossary__link-all {
-    display: inline-block;
-    margin-right: 10px;
-    color: #000000;
-    font-weight: 600; }
-    .glossary__link-all:hover, .glossary__link-all:focus, .glossary__link-all:active {
-      color: #ffffff;
-      background-color: #2d5d8b; }
   .glossary__letter {
-    color: #7e7e7e; }
+    color: #7e7e7e;
+    padding: 5px 0.1em; }
+  .glossary__input {
+    padding: 5px 10px;
+    min-width: 280px; }
 
 .glossary-item {
   margin: 20px 0; }
@@ -1111,9 +1112,9 @@ img {
         -ms-transform: translateX(50%);
             transform: translateX(50%); }
   .nav__list-wrapper {
-    -webkit-flex: 0 0 50%;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%; }
+    -webkit-flex: 0 0 75%;
+        -ms-flex: 0 0 75%;
+            flex: 0 0 75%; }
   .nav__list {
     margin: 20px 0;
     padding: 0;
