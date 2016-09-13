@@ -22,7 +22,9 @@ const changed = require('gulp-changed');
 // pug
 const pug = require('gulp-pug');
 const cached = require('gulp-cached');
+const progeny = require('gulp-progeny');
 const pugInheritance = require('gulp-pug-inheritance');
+const filter = require('gulp-filter');
 const prettify = require('gulp-prettify');
 // sass
 const sass = require('gulp-sass');
@@ -58,11 +60,12 @@ var path = {
     deploy: 'build/**/*'
   },
   src: {
-    html: './src/html/*.pug',
-    htmlDir: './src/html',
+    // html: ['src/html/**/*.pug', '!src/html/partials/abstracts/bemto/**/*.*'],
+    html: ['src/html/**/*.pug', '!src/html/**/_*.pug', '!src/html/partials/abstracts/bemto/**/*.*'],
+    htmlDir: './src/html/',
     js: 'src/js/*.js',
     css: './src/css/*.scss',
-    img: ['src/img/**/**.*', '!src/img/png-sprite/*.*'],
+    img: ['src/img/**/*.*', '!src/img/png-sprite/*.*'],
     fonts: 'src/fonts/**/*.*',
     pngSprites: 'src/img/png-sprite/*.png',
     browserify: 'src/js/*.js'
@@ -81,13 +84,16 @@ var path = {
 // Compilation pug
 gulp.task('pug', function() {
   return gulp.src(path.src.html)
-    // .pipe(gulpif(devBuild, changed(path.build.html, {extension: '.html'})))
-    // .pipe(gulpif(global.isWatching, cached('pug')))
-    // .pipe(pugInheritance({basedir: path.src.htmlDir}))
     .pipe(plumber(function(error) {
         gutil.log(gutil.colors.red(error.message));
         this.emit('end');
     }))
+    // .pipe(gulpif(devBuild, changed(path.build.html, {extension: '.html'})))
+    // .pipe(gulpif(global.isWatching, cached('pug')))
+    // .pipe(pugInheritance({basedir: path.src.htmlDir}))
+    // .pipe(filter(function (file) {
+    //   return !/\/_/.test(file.path) && !/^_/.test(file.relative);
+    // }))
     .pipe(pug())
     .pipe(prettify({
       indent_size: 2
@@ -209,8 +215,12 @@ gulp.task('browserSync', ['build'], function() {
   browserSync(config);
 });
 
+// Watching regime
+gulp.task('setWatch', function() {
+    global.isWatching = true;
+});
 // Overall watch
-gulp.task('watch', ['browserSync'], function(){
+gulp.task('watch', ['setWatch', 'browserSync'], function(){
   gulp.watch([path.watch.html], function(event, cb) {
     gulp.start('pug');
   });

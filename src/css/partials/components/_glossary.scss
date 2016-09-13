@@ -2,45 +2,33 @@
   text-align: left;
   margin-top: 20px;
   margin-bottom: 20px;
-
-  &__all{
+  &__list{
+    padding-left: 0;
+  }
+  &__item{
     display: inline-block;
-    margin-right: 10px;
+    &--all{
+      display: inline-block;
+      margin-right: 10px;      
+    }
   }
   &__link{
     color: $text-color;
     font-weight: $semibold;
+    padding: 5px 0.1em;
     &:hover, &:focus, &:active{
       color: $white;
       background-color: $blue;
     }
-    // &--current{
-    //   background-color: $blue;
-    //   color: $white;
-    //   &:hover, &:focus, &:active{
-    //     color: $white;
-    //   }
-    // }
-  }
-  &__link-all{
-    display: inline-block;
-    margin-right: 10px;
-    color: $text-color;
-    font-weight: $semibold;
-    &:hover, &:focus, &:active{
-      color: $white;
-      background-color: $blue;
-    }
-    // &--current{
-    //   background-color: $blue;
-    //   color: $white;
-    //   &:hover, &:focus, &:active{
-    //     color: $white;
-    //   }
-    // }
   }
   &__letter{
     color: $grey;
+    padding: 5px 0.1em;
+  }
+
+  &__input{
+    padding: 5px 10px;
+    min-width: 280px;
   }
 }
 

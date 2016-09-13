@@ -11,10 +11,13 @@ include ../abstracts/bemto/bemto.pug
       +e.list-wrapper
         +e.UL.list
           +e.item 
+            +e.link(href="page.html") О сертификации
+          +e.slash | 
+          +e.item 
             +e.link(href="page.html") Услуги
           +e.slash | 
           +e.item 
-            +e.link(href="page-glossary.html") О сертификации
+            +e.link(href="page-glossary.html") Сертификация продукции
           +e.slash | 
           +e.item
             +e.link(href="page-news.html") Новости
@@ -51,7 +54,7 @@ include ../abstracts/bemto/bemto.pug
         +e.INPUT.input(type='text', name='Поиск', placeholder='Поиск по сайту')
     +e.copyright © Сертификационный центр "Мостест" 2007-2016
 // Side fixed menu
-include side-fixed-menu.pug
+include _side-fixed-menu.pug
 +b.overlay
   .help-block-success Спасибо! Ваш запрос отправлен специалисту по сертификации
 

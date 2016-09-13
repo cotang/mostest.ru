@@ -13,7 +13,7 @@ block content
       // Sidebar      
       +b.ASIDE.sidebar
         +e.form
-          include partials/components/form--application-mini.pug
+          include partials/components/_form--application.pug
       // Content
       +b.SECTION.content
         +b.ARTICLE.news  
@@ -24,13 +24,13 @@ block content
             p Таким образом, начиная с 7 марта 2016 года все предприниматели, которые производят и реализуют цемент на территории нашего государства, обязаны проводить обязательную оценку его качества. Для получения сертификата на цемент им необходимо обратиться в аккредитованный центр, предоставив его специалистам всю необходимую информацию о материале (наименование, описание), контракты поставок, инвойс и многое другое. В процессе сертификации цемент (отобранные образцы) будут проходить проверку качества в лабораторных условиях.
             p Напомним, что до 7 марта только один вид цемента подлежал обязательной оценке соответствия, а именно – декларированию в системе ТР ТС. Это цемент, который применяется для строительства, реконструкции автодорог и их элементов (применяется с января 2015 года).
           +e.A.link-back(href="page-news.html") Назад
-          include partials/components/share.pug
+          include partials/components/_share.pug
         +b.SECTION.navigation
           +e.A.link(href="single-news.html") Россия ограничила поставки белорусской продукции на российский рынок
           +e.A.link(href="single-news.html") 1 января введено эмбарго на ряд турецких товаров
         
-    include partials/components/clients.pug
+    include partials/components/_clients.pug
     +e.page__bottom
-      include partials/components/reviews.pug
-      include partials/components/managers.pug
+      include partials/components/_reviews.pug
+      include partials/components/_managers.pug
 

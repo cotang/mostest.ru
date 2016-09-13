@@ -13,7 +13,7 @@ block content
       // Sidebar      
       +b.ASIDE.sidebar
         +e.form
-          include partials/components/form--application-mini.pug
+          include partials/components/_form--application.pug
       // Content
       +b.SECTION.content
         +b.ARTICLE.question
@@ -38,14 +38,14 @@ block content
               p Поскольку Вы приобретаете товар у изготовителя, у него на данную продукцию уже есть все необходимые документы.
               p Подобные декларации сейчас аннулируются, а органы по сертификации получают штрафы за такие документы.
           +e.A.link-back(href="page-form-question.html") Назад
-          include partials/components/share.pug
+          include partials/components/_share.pug
         +b.SECTION.navigation
           +e.A.link(href="single-question.html") Сертификат на оборудование
           +e.A.link(href="single-question.html") Сертификат на кедровые орехи и масло
         
-    include partials/components/clients.pug
+    include partials/components/_clients.pug
     +e.page__bottom
-      include partials/components/reviews.pug
-      include partials/components/managers.pug
+      include partials/components/_reviews.pug
+      include partials/components/_managers.pug
 
 

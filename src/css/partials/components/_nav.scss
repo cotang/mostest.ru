@@ -21,7 +21,7 @@
     }
   }
   &__list-wrapper{
-    flex: 0 0 50%;
+    flex: 0 0 75%;
     @include mq($from:xs, $until:lg){
       flex: 0 0 100%;
       display: none;

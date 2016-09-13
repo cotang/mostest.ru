@@ -52,14 +52,14 @@ include ../abstracts/bemto/bemto.pug
         +e.H2.title Заказать звонок
         +e.text
           p Закажите сейчас бесплатный звонок с сайта по любому актуальному для Вас вопросу – специалист Мостест Вам перезвонит.
-          include form--call.pug
+          include _form--call.pug
     li.side-fixed-menu__item
       a.side-fixed-menu__link.side-fixed-menu__link--toggle(href="#") Задать вопрос
       +b.side-fixed-details
         +e.H2.title Задать вопрос
         +e.text
           p С чего начать оформление? Заполнив форму, Вы можете получить полную информацию по любым актуальным для Вас вопросам сертификации, метрологии, стандартизации и т.д.
-          include form--question.pug
+          include _form--question.pug
         +e.side-fixed-details__link-all(href="#") Читать все вопросы          
     li.side-fixed-menu__item
       a.side-fixed-menu__link.side-fixed-menu__link--outer(href="https://vk.com/mostestsert", target="_blank") Группа вконтакте

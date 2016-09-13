@@ -10,7 +10,7 @@ block content
       // Sidebar      
       +b.ASIDE.sidebar
         +e.form
-          include partials/components/form--application-mini.pug
+          include partials/components/_form--application.pug
       // Content
       +b.SECTION.content           
         +e.H1.title Контакты
@@ -22,12 +22,12 @@ block content
             li проверку всех видов средств измерений,
             li разработку технических условий и т.д.
           p профессионализму наших специалистов, проверенному многолетним опытом работы с надзорными органами . Центр сертификации «МосТест» обоснованно гарантирует не только минимальные сроки и традиционное качество предоставления услуг, но и низкую стоимость работ за счет их оптимизации.
-        include partials/components/offices.pug
+        include partials/components/_offices.pug
 
-    include partials/components/clients.pug
+    include partials/components/_clients.pug
     +e.page__bottom
-      include partials/components/reviews.pug
-      include partials/components/managers.pug
+      include partials/components/_reviews.pug
+      include partials/components/_managers.pug
 
 
 

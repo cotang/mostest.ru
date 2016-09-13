@@ -2,7 +2,7 @@ extends partials/templates/template.pug
 //- include partials/abstracts/bemto/bemto.pug
 
 block content
-  +b.SECTION.page--single-glossary.container  
+  +b.SECTION.page--letter-glossary.container  
     +b.SECTION.breadcrumbs
       a(href="index.html") Центр сертификации Мостест
       =' > '
@@ -13,20 +13,33 @@ block content
       // Sidebar      
       +b.ASIDE.sidebar
         +e.form
-          include partials/components/form--application-mini.pug
+          include partials/components/_form--application.pug
       // Content
       +b.SECTION.content
         +b.glossary
-          +e.A.link-all(href="page-glossary.html") Все записи:
-          +e.A.link(href="single-glossary.html") А
-          +e.A.link(href="single-glossary.html") Б
-          +e.A.SPAN.letter В
-          +e.A.link(href="single-glossary.html") Г
-          +e.A.link(href="single-glossary.html") Д
-          +e.A.link(href="single-glossary.html") Е
-          +e.SPAN.letter Э
-          +e.SPAN.letter Ю
-          +e.A.link(href="single-glossary.html") Я
+          +e.UL.list       
+            +e.item--all Все записи:
+            +e.item
+              +e.link(href="letter-glossary.html") А
+            +e.item
+              +e.link(href="letter-glossary.html") Б
+            +e.item
+              +e.SPAN.letter В
+            +e.item
+              +e.link(href="letter-glossary.html") Г
+            +e.item
+              +e.link(href="letter-glossary.html") Д
+            +e.item
+              +e.link(href="letter-glossary.html") Е
+            +e.item
+              +e.SPAN.letter Э
+            +e.item
+              +e.SPAN.letter Ю
+            +e.item
+              +e.link(href="letter-glossary.html") Я
+          +e.search
+            +e.FORM.form(action='', method='', id='glossary-search')
+              +e.INPUT.input(type='text', name='Поиск по записям', placeholder='Поиск по записям')
 
         +b.glossary-item  
           +e.A.link(href="page.html") Автомобили
@@ -40,12 +53,10 @@ block content
           +e.A.link(href="page.html") Антенна / Сертификат на антенну
         +b.glossary-item
           +e.A.link(href="page.html") Асфальт / Сертификат на асфальт
-
-        include partials/components/share.pug
         
-    include partials/components/clients.pug
+    include partials/components/_clients.pug
     +e.page__bottom
-      include partials/components/reviews.pug
-      include partials/components/managers.pug
+      include partials/components/_reviews.pug
+      include partials/components/_managers.pug
 
 

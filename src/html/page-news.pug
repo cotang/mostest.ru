@@ -10,7 +10,7 @@ block content
       // Sidebar
       +b.ASIDE.sidebar
         +e.form
-          include partials/components/form--application-mini.pug
+          include partials/components/_form--application.pug
       // Content
       +b.SECTION.content           
         +e.H1.title Новости
@@ -39,8 +39,8 @@ block content
           +e.A.number(href="page-news.html") 2
           +e.A.number(href="page-news.html") 3
 
-    include partials/components/clients.pug
+    include partials/components/_clients.pug
     +e.page__bottom
-      include partials/components/reviews.pug
-      include partials/components/managers.pug
+      include partials/components/_reviews.pug
+      include partials/components/_managers.pug
 

@@ -10,7 +10,7 @@ block content
       // Sidebar
       +b.ASIDE.sidebar
         +e.form
-          include partials/components/form--application-mini.pug
+          include partials/components/_form--application.pug
       // Content
       +b.SECTION.content           
         +e.H1.title Сертификат Таможенного Союза
@@ -34,9 +34,9 @@ block content
             li Сертификационный центр проводит лабораторные испытания, после чего составляется протокол испытаний.
             li На основании протоколов сотрудники сертификационного центра принимают решение об успешности прохождения процедуры сертификации и возможности выдачи сертификата ТС.
           p Чтобы сэкономить свое время и избежать возможных ошибок при оформлении документов, мы рекомендуем Вам обратиться к специалистам. Квалифицированные сотрудники нашего центра детально разъяснят особенности прохождения сертификации, помогут быстро и качественно пройти все необходимые этапы для получения сертификата Таможенного союза.
-        include partials/components/share.pug
+        include partials/components/_share.pug
 
-    include partials/components/clients.pug
+    include partials/components/_clients.pug
     +e.page__bottom
-      include partials/components/reviews.pug
-      include partials/components/managers.pug
+      include partials/components/_reviews.pug
+      include partials/components/_managers.pug
