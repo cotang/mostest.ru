@@ -31,7 +31,7 @@
     }
   }
   &__buttons{
-    flex: 0 0 33%;
+    flex: 0 0 25%;
     text-align: right;
     max-width: 250px;
     margin-top: 25px;
@@ -46,17 +46,17 @@
 }
 
 .logo{
-  flex: 0 0 33%;
+  flex: 0 0 25%;
   margin-top: -30px;
   text-align: left;
   @include mq($from:xs, $until:lg){
-    flex: 0 0 50%;
+    flex: 0 0 100%;
     margin-top: 0;
     text-align: center;
   }
-  @include mq($from:xs, $until:sm){
-    flex: 0 0 100%;
-  }
+  // @include mq($from:xs, $until:sm){
+  //   flex: 0 0 100%;
+  // }
   &__img{
     display: block;
     width: 160px;
@@ -83,16 +83,17 @@
 }
 
 .city{
-  flex: 0 0 33%;
+  flex: 0 0 25%;
   max-width: 180px;
   margin: 15px auto 0;
   text-align: left;
   @include mq($from:sm, $until:lg){
     flex: 0 0 50%;
+    max-width: 50%;    
+    text-align: center;
   }
   @include mq($from:xs, $until:sm){
     flex: 0 0 100%;
-    text-align: center;
     margin-top: 25px;
   }
   &__name-wrapper{
