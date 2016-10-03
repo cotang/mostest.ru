@@ -100,18 +100,6 @@
     position: relative;
     margin-bottom: 5px;
   }
-  &__name{    
-    &:after{
-      content: "";
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: 10px;
-      @include sprite($s-icon-down);     
-    }
-    &:hover, &:focus{
-      cursor: pointer;
-    }
-  }
   &__dropdown{
     display: none;
     text-align: left;
@@ -155,5 +143,21 @@
   }
   &__email{
     color: $text-color;
+  }
+
+
+  &--spb{
+    .city__name{    
+      &:after{
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+        @include sprite($s-icon-down);     
+      }
+      &:hover, &:focus{
+        cursor: pointer;
+      }
+    }
   }
 }

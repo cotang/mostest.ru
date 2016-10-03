@@ -1,6 +1,6 @@
-window.$ = window.jQuery =  require('jquery');
-window.slick =              require('./vendor/bower/slick');
-window.inputmask =          require('./vendor/bower/jquery.inputmask.bundle');
+// window.$ = window.jQuery =  require('jquery');
+// window.slick =              require('./vendor/bower/slick');
+// window.inputmask =          require('./vendor/bower/jquery.inputmask.bundle');
 
 jQuery(document).ready(function($){  
 
@@ -11,23 +11,24 @@ jQuery(document).ready(function($){
   }); 
 
   /* City list */
-  $('.city__name').click(function(){
+  var changingCityName = $('.city--spb .city__name')
+  $(changingCityName).click(function(){
     $('.city__dropdown').toggle(); 
   }); 
 
   /* изменение названия, телефона и почты при выборе города */
   $('.city__item').on('click', function(){
-    $('.city__name').html($(this).html());     
-    $('.city__email-wrapper').html('<a class="city__email" target="_blank" href="mailto:'+$(this).data("email")+'">'+$(this).data("email")+'</a>');
+    $(changingCityName).html($(this).html());     
+    $('.city--spb .city__email-wrapper').html('<a class="city__email" target="_blank" href="mailto:'+$(this).data("email")+'">'+$(this).data("email")+'</a>');
 
     var tel = $(this).data("tel");
     var hrefTel = tel.replace(/\D/g, "");
-    $('.city__tel-wrapper').html('<a class="city__tel" target="_blank" href="tel:+'+hrefTel+'">'+tel+'</a>');
+    $('.city--spb .city__tel-wrapper').html('<a class="city__tel" target="_blank" href="tel:+'+hrefTel+'">'+tel+'</a>');
  
     if ($(this).data("tel2") !== undefined) {
       var tel2 = $(this).data("tel2");
       var hrefTel2 = tel2.replace(/\D/g, "");   
-      $('<a class="city__tel" target="_blank" href="tel:+'+hrefTel2+'">'+tel2+'</a>').appendTo($('.city__tel-wrapper'));
+      $('<a class="city__tel" target="_blank" href="tel:+'+hrefTel2+'">'+tel2+'</a>').appendTo($('.city--spb .city__tel-wrapper'));
     }
  
     $('.city__dropdown').hide(); 
