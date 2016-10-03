@@ -1035,17 +1035,6 @@ img {
   .city__name-wrapper {
     position: relative;
     margin-bottom: 5px; }
-  .city__name:after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 10px;
-    background-image: url(../img/png-sprite.png);
-    background-position: -338px -221px;
-    width: 8px;
-    height: 5px; }
-  .city__name:hover, .city__name:focus {
-    cursor: pointer; }
   .city__dropdown {
     display: none;
     text-align: left;
@@ -1091,6 +1080,17 @@ img {
               transform: translateX(-120%); }
   .city__email {
     color: #000000; }
+  .city--spb .city__name:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    background-image: url(../img/png-sprite.png);
+    background-position: -338px -221px;
+    width: 8px;
+    height: 5px; }
+  .city--spb .city__name:hover, .city--spb .city__name:focus {
+    cursor: pointer; }
 
 .nav {
   -webkit-flex: 0 0 100%;
