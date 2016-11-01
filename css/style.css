@@ -680,24 +680,6 @@ img {
     position: relative;
     font-weight: 600;
     font-size: 18px; }
-    .form__title:before {
-      display: block;
-      position: absolute;
-      top: 50%;
-      -webkit-transform: translateY(-75%);
-          -ms-transform: translateY(-75%);
-              transform: translateY(-75%);
-      content: "";
-      width: calc(100% - 40px);
-      height: 7px;
-      border-top: 1px solid #dadada;
-      border-bottom: 1px solid #dadada; }
-    .form__title span {
-      position: relative;
-      z-index: 1;
-      background-color: #ffffff;
-      padding: 0 20px;
-      display: inline-block; }
   .form__input {
     padding: 8px 10px;
     width: 100%;
