@@ -11,8 +11,7 @@ mixin form(items)
     +b.SECTION(class= 'form--' + item.name)
       +e.FORM.form(action='', method='', id= item.id)
         //- +e.A.close(href='#') Закрыть
-        +e.H3.title 
-          span #{item.title}
+        +e.H3.title #{item.title}
           
         //- if item.application
         //-   .form-group.field-question-production.required

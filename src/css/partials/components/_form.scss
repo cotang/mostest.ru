@@ -26,24 +26,6 @@
     @include mq($from:xs, $until:sm){
       padding: 20px 20px 10px;
     }
-    &:before{
-      display: block;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-75%);
-      content: "";
-      width: calc(100% - 40px);
-      height: 7px;
-      border-top: 1px solid $grey-border;
-      border-bottom: 1px solid $grey-border;
-    }
-    span{
-      position: relative;
-      z-index: 1;
-      background-color: $white;
-      padding: 0 20px;
-      display: inline-block;
-    }
   }
   &__input{
     padding: 8px 10px; 
