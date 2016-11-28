@@ -18,6 +18,31 @@
   &__item{
     list-style-type: none;
     text-align: center;
+    &:nth-of-type(1){
+      .side-fixed-menu__link:before{
+        @include sprite($s-fixed-percent); 
+      }      
+    }
+    &:nth-of-type(2){
+      .side-fixed-menu__link:before{
+        @include sprite($s-fixed-tel); 
+      }      
+    }
+    &:nth-of-type(3){
+      .side-fixed-menu__link:before{
+        @include sprite($s-fixed-doc); 
+      }      
+    }
+    &:nth-of-type(4){
+      .side-fixed-menu__link:before{
+        @include sprite($s-fixed-vk); 
+      }      
+    }
+    &:nth-of-type(5){
+      .side-fixed-menu__link:before{
+        @include sprite($s-fixed-up); 
+      }      
+    }
   }
   &__link{
     position: relative;
@@ -32,21 +57,6 @@
       left: 50%;
       top: 40px;
       transform: translate(-50%, -50%);
-    }
-    &:nth-child(1):before{
-      @include sprite($s-fixed-percent); 
-    }
-    &:nth-child(2):before{
-      @include sprite($s-fixed-tel); 
-    }
-    &:nth-child(3):before{
-      @include sprite($s-fixed-doc); 
-    }
-    &:nth-child(4):before{
-      @include sprite($s-fixed-vk); 
-    }
-    &:nth-child(5):before{
-      @include sprite($s-fixed-up); 
     }
     &:hover, &:focus{
       background-color: $grey-border; 
