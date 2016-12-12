@@ -947,8 +947,8 @@ img {
   padding: 0 50px 20px;
   background-image: url(../img/header-bg.jpg);
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+  background-position: 50% 0;
+  background-size: 100% 100%;
   outline: 1px solid #ffffff;
   outline-offset: -5px; }
   .header__inner {
@@ -1061,7 +1061,9 @@ img {
           -ms-transform: translateX(-120%);
               transform: translateX(-120%); }
   .city__email {
-    color: #000000; }
+    display: block;
+    color: #000000;
+    margin-bottom: 5px; }
   .city--spb .city__name:after {
     content: "";
     display: inline-block;

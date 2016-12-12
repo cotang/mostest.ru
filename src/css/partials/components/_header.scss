@@ -2,8 +2,8 @@
   padding: 0 50px 20px;
   background-image: url(../img/header-bg.jpg);
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+  background-position: 50% 0;
+  background-size: 100% 100%;
   outline: 1px solid $white;
   outline-offset: -5px;
   @include mq($from:xs, $until:lg){
@@ -142,7 +142,9 @@
     }    
   }
   &__email{
+    display: block;
     color: $text-color;
+    margin-bottom: 5px;
   }
 
 

@@ -19,16 +19,19 @@ jQuery(document).ready(function($){
   /* изменение названия, телефона и почты при выборе города */
   $('.city__item').on('click', function(){
     $(changingCityName).html($(this).html());     
-    $('.city--spb .city__email-wrapper').html('<a class="city__email" target="_blank" href="mailto:'+$(this).data("email")+'">'+$(this).data("email")+'</a>');
+    $('.city--spb .city__email-wrapper').html('<a class="city__email" target="_blank" href="mailto:'+$(this).data("email0")+'">'+$(this).data("email0")+'</a>');
+    if ($(this).data("email1") !== undefined) {
+      $('<a class="city__email" target="_blank" href="mailto:'+$(this).data("email1")+'">'+$(this).data("email1")+'</a>').appendTo($('.city--spb .city__email-wrapper'));
+    }
 
-    var tel = $(this).data("tel");
-    var hrefTel = tel.replace(/\D/g, "");
-    $('.city--spb .city__tel-wrapper').html('<a class="city__tel" target="_blank" href="tel:+'+hrefTel+'">'+tel+'</a>');
+    var tel0 = $(this).data("tel0");
+    var hrefTel0 = tel0.replace(/\D/g, "");
+    $('.city--spb .city__tel-wrapper').html('<a class="city__tel" target="_blank" href="tel:+'+hrefTel0+'">'+tel0+'</a>');
  
-    if ($(this).data("tel2") !== undefined) {
-      var tel2 = $(this).data("tel2");
-      var hrefTel2 = tel2.replace(/\D/g, "");   
-      $('<a class="city__tel" target="_blank" href="tel:+'+hrefTel2+'">'+tel2+'</a>').appendTo($('.city--spb .city__tel-wrapper'));
+    if ($(this).data("tel1") !== undefined) {
+      var tel1 = $(this).data("tel1");
+      var hrefTel1 = tel1.replace(/\D/g, "");   
+      $('<a class="city__tel" target="_blank" href="tel:+'+hrefTel1+'">'+tel1+'</a>').appendTo($('.city--spb .city__tel-wrapper'));
     }
  
     $('.city__dropdown').hide(); 
