@@ -1,8 +1,8 @@
 'use strict';
 
 // Set Env
-// process.env.NODE_ENV = 'development';
-process.env.NODE_ENV = 'production';
+process.env.NODE_ENV = 'development';
+// process.env.NODE_ENV = 'production';
 
 // Check ENV
 global.devBuild = process.env.NODE_ENV !== 'production';
@@ -84,10 +84,7 @@ var path = {
 // Compilation pug
 gulp.task('pug', function() {
   return gulp.src(path.src.html)
-    .pipe(plumber(function(error) {
-        gutil.log(gutil.colors.red(error.message));
-        this.emit('end');
-    }))
+    .pipe(plumber({ errorHandler: onError }))
     // .pipe(gulpif(devBuild, changed(path.build.html, {extension: '.html'})))
     // .pipe(gulpif(global.isWatching, cached('pug')))
     // .pipe(pugInheritance({basedir: path.src.htmlDir}))
@@ -105,19 +102,16 @@ gulp.task('pug', function() {
 // Compilation sass
 gulp.task('sass', function () {
   return gulp.src(path.src.css)
-//    .pipe(sourcemaps.init())
-    .pipe(plumber(function(error) {
-        gutil.log(gutil.colors.red(error.message));
-        this.emit('end');
-    }))
+    .pipe(sourcemaps.init())
+    .pipe(plumber({ errorHandler: onError }))
     .pipe(sass())
     .pipe(postcss([
       autoprefixer({browsers: ['last 3 version']}),
       mqpacker
     ]))
+    .pipe(sourcemaps.write('/'))
     .pipe(gulp.dest(path.build.css))    
     .pipe(cleancss())
-//    .pipe(sourcemaps.write())
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest(path.build.css))
     .pipe(reload({stream: true}));
@@ -125,12 +119,12 @@ gulp.task('sass', function () {
 
 // Compilation js v1
 // gulp.task('js', function() {
-//   var jsFiles = glob.sync(path.src.browserify);
+//   var jsFiles = glob.sync(path.src.browserify);  
 //   return browserify({
 //       entries: jsFiles,
 //       extensions: ['.jsx']
 //     })
-//     .bundle()  
+//     .bundle()
 //     .pipe(plumber(function(error) {
 //         gutil.log(gutil.colors.red(error.message));
 //         this.emit('end');
@@ -138,8 +132,10 @@ gulp.task('sass', function () {
 //     .pipe(source('script.js'))
 //     .pipe(gulp.dest(path.build.js))
 //     .pipe(buffer())
+//     .pipe(sourcemaps.init())
 //     .pipe(uglify())
-//     .pipe(rename('script.min.js'))    
+//     .pipe(rename('script.min.js'))
+//     .pipe(sourcemaps.write('/'))
 //     .pipe(gulp.dest(path.build.js))
 //     .pipe(reload({stream: true}));
 // });
@@ -148,11 +144,15 @@ gulp.task('sass', function () {
 // (If jquery is used from 3rd party, and you need to exclude it from script.min.js, you should manually put all required .js files into path.src.js directory)
 gulp.task('js', function() {
   return gulp.src(path.src.js)
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(plumber({ errorHandler: onError }))
     .pipe(concat('script.min.js'))
     .pipe(uglify())
+    .pipe(sourcemaps.write('/'))
     .pipe(gulp.dest(path.build.js))
     .pipe(reload({stream: true}));
 });
+
 
 // Optimization images
 gulp.task('img', function () {
@@ -251,3 +251,9 @@ gulp.task('deploy', function() {
 gulp.task('default', ['watch']);
 
 
+var onError = function(err) {
+    notify.onError({
+      title: "Error in " + err.plugin,
+    })(err);
+    this.emit('end');
+}

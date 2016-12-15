@@ -50,6 +50,7 @@
     @include sprite($s-icon-zoom);
   }
   &__modal{
+    opacity: 0;
     display: none;
     img{
       padding: 20px;

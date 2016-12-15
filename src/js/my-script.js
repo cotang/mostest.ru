@@ -158,8 +158,34 @@ jQuery(document).ready(function($){
 
   /* Маска телефона */
   $('#formCall input[type="tel"]').inputmask("+7(999)9999999");
-
   
 });
 
 
+// var anyForm = $('.form form');
+// var messageSuccess = $('.overlay .help-block-success');
+// $(anyForm).submit(function (e) {
+//   $.ajax({
+//     url: $(this).attr("action"),
+//     data: $(this).serialize(),
+//     type: 'post',
+//     dataType: "json",
+//     success: function (data) {
+//       alert("Спасибо! Ваш запрос отправлен специалисту по сертификации");
+//       modalSuccess();
+//     },
+//     error: function () {
+//       alert('Отправка формы не удалась. Попробуйте еще раз');
+//     }
+//   })
+//   e.preventDefault();
+// });
+
+  // function modalSuccess() {
+  //   $('.overlay').show();
+  //   $(messageSuccess).fadeIn(); 
+  //   setTimeout(function() {
+  //     $(messageSuccess).hide();
+  //     $('.overlay').hide();
+  //   }, 1500);
+  // }
