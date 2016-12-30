@@ -5,9 +5,10 @@
     }
   }
   &__map{
-    padding: 20px 0;
+    height: 400px;
+    margin: 20px 0;
     @include mq($from:xs, $until:sm){
-      padding: 0;
+      margin: 0;
     } 
 
     iframe{
